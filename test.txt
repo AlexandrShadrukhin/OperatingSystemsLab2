@@ -1,0 +1,11 @@
+apple
+banana
+orange
+apple
+grape
+banana
+pear
+orange
+watermelon
+grape
+kiwi

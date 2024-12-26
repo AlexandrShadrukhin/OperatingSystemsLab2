@@ -1,0 +1,29 @@
+name: Build
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up CMake
+        run: |
+          brew update
+          brew install cmake
+
+      - name: Configure and build
+        run: |
+          mkdir build
+          cd build
+          cmake ..
+          make
